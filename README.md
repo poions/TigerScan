@@ -40,8 +40,8 @@ Options:
 ## 使用教程:
 git clone 将该项目下载下来后，通过go build 生成二进制文件.
 期间可能会需要下载plugin中使用到的第三方库，可通过go get的形式下载
-'''
+```
 cd TigerScan
 go build 
 ./TigerScan -u 127.0.0.1 -p 22 -m ssh
-'''
+```
