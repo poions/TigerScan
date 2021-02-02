@@ -49,6 +49,8 @@ go build
 ```
 
 ## 插件扩展
+### 说明
+ - 支持热更新
 ### 注意事项
  - 插件主函数名称必须为Poc, 例子:  func Poc() {}
  - 插件主函数需要接入参数ip,port,username,password
@@ -77,4 +79,8 @@ func Poc(ip, port, username, password) string {
     return fmt.Sprintf("%s:%s:%s:%s:%s","true", ip, port, username, password, msg)
 }
 
+```
+编写完成规则后，需要将检测模块源码打包成链接库形式
+```
+go build --buildmode=plugin -o plugins/redis.so redis.go
 ```
