@@ -67,6 +67,9 @@ type Filter  struct {
 redis.go
 ```
 package main
+import (
+    "fmt"
+)
 
 func Poc(ip, port, username, password) string {
     ....
