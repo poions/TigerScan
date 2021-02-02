@@ -47,3 +47,20 @@ cd TigerScan
 go build 
 ./TigerScan -u 127.0.0.1 -p 22 -m ssh
 ```
+
+## 插件扩展
+### 注意事项
+ - 插件主函数名称必须为Poc, 例子:  func Poc() {}
+ - 插件主函数Poc return返回数据必须包含下面的字段，且必须为string格式
+
+```
+type Filter  struct {
+    Status	bool	`json:"status"`
+    IP		string	`json:"ip"`
+    PORT	string	`json:"port"`
+    USERNAME	string	`json:"username"`
+    PASSWORD	string	`json:"password"`
+    Desp	string	`json:"desp"`
+    Message	string	`json:"message"`
+}
+```
