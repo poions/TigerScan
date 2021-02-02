@@ -28,13 +28,15 @@ Options:
   -all
       扫描检测plugin中的所有模块
   -list
-    	List all detection types
+    	可列出所有可使用的模块
   -p string
-    	Specify an ports for risk scanning
+    	指定端口号
   -m string
-    	Specifies the type of risk scan:
+    	指定扫描模块
   -u string
-    	Specify an address for risk scanning
+    	指定扫描地址
+  -f string
+  	选择批量扫描导入的txt文档
 ```
 
 ## 使用教程:
