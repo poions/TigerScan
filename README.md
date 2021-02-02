@@ -37,8 +37,11 @@ Options:
     	Specify an address for risk scanning
 ```
 
-## 目前检测类型有:
-| 规则ID | 规则描述 | 备注 |\n
-| `1`  | redis未授权访问 | |
-| `2`  | redis弱口令 | |
-| `3`  | ssh弱口令 | |
+## 使用教程:
+git clone 将该项目下载下来后，通过go build 生成二进制文件.
+期间可能会需要下载plugin中使用到的第三方库，可通过go get的形式下载
+'''
+cd TigerScan
+go build 
+./TigerScan -u 127.0.0.1 -p 22 -m ssh
+'''
