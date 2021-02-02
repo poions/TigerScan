@@ -51,8 +51,8 @@ go build
 ## 插件扩展
 ### 注意事项
  - 插件主函数名称必须为Poc, 例子:  func Poc() {}
+ - 插件主函数需要接入参数ip,port,username,password
  - 插件主函数Poc return返回数据必须包含下面的字段，且必须为string格式
-
 ```
 type Filter  struct {
     Status	bool	`json:"status"`
@@ -60,7 +60,18 @@ type Filter  struct {
     PORT	string	`json:"port"`
     USERNAME	string	`json:"username"`
     PASSWORD	string	`json:"password"`
-    Desp	string	`json:"desp"`
     Message	string	`json:"message"`
 }
+```
+### 例子
+redis.go
+```
+package main
+
+func Poc(ip, port, username, password) string {
+    ....
+    #如果检测逻辑判断为存在漏洞风险则return true否则为false;这里true/false 为string格式
+    return fmt.Sprintf("%s:%s:%s:%s:%s","true", ip, port, username, password, msg)
+}
+
 ```
