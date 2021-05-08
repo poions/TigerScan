@@ -1,0 +1,21 @@
+{
+    "online_db":{
+        "passwd_dict_db_addr": "",
+        "passwd_dict_db_name":"",
+        "passwd_dict_collect_name":"",
+        "passwd_dict_db_user": "",
+        "passwd_dict_db_pass": ""
+    },
+
+    "dict_passwd_path":"dict/pwd.txt",
+    "dict_user_path" : "dict/user.txt",
+
+    "assets_db_info":{
+    	"assets_db_addr": "172.28.163.72",
+	"assets_db_port": "28017",
+	"assets_db_user": "",
+	"assets_db_pass": "",
+	"assets_db_name": "assets_new",
+	"assets_db_collect": "cmdb"
+    }
+}
